@@ -37,7 +37,7 @@ export default async function ClientsList() {
         </ul>
       )}
       <Button asChild className="mt-4">
-        <Link href="/clients/new">Ajouter un client</Link>
+        <Link href="/generate-link">Ajouter un client</Link>
       </Button>
     </div>
   )

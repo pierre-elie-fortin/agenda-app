@@ -6,7 +6,6 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 moment.locale('fr')
 const localizer = momentLocalizer(moment)
-
 export default function Calendrier({ events }: { events: any[] }) {
   return (
     <div style={{ height: '500px' }}>
@@ -15,7 +14,7 @@ export default function Calendrier({ events }: { events: any[] }) {
         events={events}
         startAccessor="start"
         endAccessor="end"
-        titleAccessor={(event) => `${event.clientNom} - ${event.projectNom}`}
+        titleAccessor={(events) =>  events.title}
         style={{ height: '100%' }}
         messages={{
           next: "Suivant",

@@ -1,7 +1,7 @@
 'use server'
 
-import { getServerSession } from "next-auth/next"
-import { authOptions } from "./api/auth/[...nextauth]/route"
+import {getServerSession} from "next-auth/next"
+import {authOptions} from "./api/auth/[...nextauth]/route"
 import prisma from "@/lib/prisma"
 
 export async function getClients() {
@@ -18,13 +18,13 @@ export async function getClients() {
   })
 }
 
-export async function getClient(id: string) {
+export async function getClient(params) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
   return prisma.client.findFirst({
     where: {
-      id: id,
+      id: params.id,
       user: { email: session.user.email }
     },
     include: {
@@ -77,13 +77,13 @@ export async function addProject(clientId: string, { nom, description }: { nom: 
   })
 }
 
-export async function getProject(id: string) {
+export async function getProject(params) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
   return prisma.project.findFirst({
     where: {
-      id: id,
+      id: params,
       client: { user: { email: session.user.email } }
     },
     include: {
@@ -93,23 +93,48 @@ export async function getProject(id: string) {
   })
 }
 
-export async function addSession(projectId: string, date: Date) {
-  const session = await getServerSession(authOptions)
-  if (!session?.user?.email) throw new Error("Non autorisé")
 
-  return prisma.session.create({
-    data: {
-      date,
-      project: { connect: { id: projectId } }
+export async function addSession(params, date: Date) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.email) throw new Error("Unauthorized: User email is missing");
+
+  try {
+    const formattedDate = new Date(date);
+    if (isNaN(formattedDate.getTime())) {
+      throw new Error("Invalid date format");
     }
-  })
+
+    const formattedExpires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+
+    const user = await prisma.user.findUnique({ where: { email: session.user.email } });
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const payload = {
+      date: formattedDate,
+      projectId: params,
+      sessionToken: `${session.user.email}-${Date.now()}`,
+      userId: user.id,
+      expires: formattedExpires,
+    };
+
+
+    return await prisma.projectSession.create({data: payload});
+  } catch (error) {
+    console.error("Error adding session:", error.stack || error);
+    throw new Error(`Failed to add session: ${error.message}`);
+  }
 }
+
+
+
 
 export async function deleteSession(sessionId: string) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
-  return prisma.session.deleteMany({
+  return prisma.projectSession.deleteMany({
     where: {
       id: sessionId,
       project: { client: { user: { email: session.user.email } } }
@@ -124,7 +149,7 @@ export async function getSessionsForMonth(date: Date) {
   const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1)
   const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0)
 
-  return prisma.session.findMany({
+  return prisma.projectSession.findMany({
     where: {
       date: {
         gte: startOfMonth,
@@ -147,4 +172,37 @@ export async function getSessionsForMonth(date: Date) {
     }
   })
 }
+
+export async function getSessionsForDay(date: Date) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.email) throw new Error("Non autorisé");
+
+  // Define the start and end of the day
+  const startOfDay = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const endOfDay = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+
+  return prisma.projectSession.findMany({
+    where: {
+      date: {
+        gte: startOfDay,
+        lt: endOfDay, // Use less than (<) to exclude the next day boundary
+      },
+      project: {
+        client: {
+          user: {
+            email: session.user.email,
+          },
+        },
+      },
+    },
+    include: {
+      project: {
+        include: {
+          client: true,
+        },
+      },
+    },
+  });
+}
+
 

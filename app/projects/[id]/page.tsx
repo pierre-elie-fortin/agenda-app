@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect, use } from 'react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { Button } from '@/components/ui/button'
@@ -12,27 +11,30 @@ import { getProject, addSession, deleteSession } from '@/app/actions'
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const [project, setProject] = useState<any>(null)
   const [newSessionDate, setNewSessionDate] = useState('')
-  const router = useRouter()
-
+  const useParams = use(params)
   useEffect(() => {
     const fetchProject = async () => {
-      const fetchedProject = await getProject(params.id)
+      const fetchedProject = await getProject(useParams.id)
       setProject(fetchedProject)
     }
     fetchProject()
-  }, [params.id])
+  }, [useParams.id])
 
   const handleAddSession = async (e: React.FormEvent) => {
     e.preventDefault()
-    await addSession(params.id, new Date(newSessionDate))
+      try {
+          const newSession =   await addSession(useParams.id, new Date(newSessionDate));
+      } catch (error) {
+          console.error("Failed to add session:", error);
+      }
     setNewSessionDate('')
-    const updatedProject = await getProject(params.id)
+    const updatedProject = await getProject(useParams.id)
     setProject(updatedProject)
   }
 
   const handleDeleteSession = async (sessionId: string) => {
     await deleteSession(sessionId)
-    const updatedProject = await getProject(params.id)
+    const updatedProject = await getProject(useParams.id)
     setProject(updatedProject)
   }
 

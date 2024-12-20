@@ -1,30 +1,32 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { getClient, updateClient, addSession, deleteSession } from '@/app/actions'
+import { getClient, updateClient } from '@/app/actions'
+import Link from "next/link";
 
 export default function EditClientPage({ params }: { params: { id: string } }) {
   const [client, setClient] = useState<any>(null)
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
-  const [newSessionDate, setNewSessionDate] = useState('')
   const router = useRouter()
 
   useEffect(() => {
+    if (!params) return
     const fetchClient = async () => {
-      const fetchedClient = await getClient(params.id)
+
+      const fetchedClient = await getClient(params)
       setClient(fetchedClient)
       setNom(fetchedClient.nom)
       setEmail(fetchedClient.email)
       setTelephone(fetchedClient.telephone)
     }
     fetchClient()
-  }, [params.id])
+  }, [params])
 
   const handleUpdateClient = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -32,19 +34,6 @@ export default function EditClientPage({ params }: { params: { id: string } }) {
     router.push(`/clients/${params.id}`)
   }
 
-  const handleAddSession = async (e: React.FormEvent) => {
-    e.preventDefault()
-    await addSession(params.id, new Date(newSessionDate))
-    setNewSessionDate('')
-    const updatedClient = await getClient(params.id)
-    setClient(updatedClient)
-  }
-
-  const handleDeleteSession = async (sessionId: string) => {
-    await deleteSession(sessionId)
-    const updatedClient = await getClient(params.id)
-    setClient(updatedClient)
-  }
 
   if (!client) {
     return <div>Chargement...</div>
@@ -70,29 +59,18 @@ export default function EditClientPage({ params }: { params: { id: string } }) {
         <Button type="submit">Mettre à jour le client</Button>
       </form>
 
-      <h2 className="text-2xl font-bold mt-6 mb-2">Sessions</h2>
+      <h2 className="text-2xl font-bold mt-6 mb-2">Projets</h2>
       <ul className="space-y-2 mb-4">
-        {client.sessions.map((session: any) => (
-          <li key={session.id} className="flex justify-between items-center border p-2 rounded">
-            <span>{new Date(session.date).toLocaleString()}</span>
-            <Button variant="destructive" onClick={() => handleDeleteSession(session.id)}>Supprimer</Button>
+        {client.projects.map((project: any) => (
+          <li key={project.id} className="flex justify-between items-center border p-2 rounded">
+            <Link href={`/projects/${project.id}`} className="text-blue-500 hover:underline">
+              {project.nom}
+            </Link>
           </li>
         ))}
       </ul>
 
-      <form onSubmit={handleAddSession} className="space-y-4">
-        <div>
-          <Label htmlFor="newSession">Nouvelle session</Label>
-          <Input
-            id="newSession"
-            type="datetime-local"
-            value={newSessionDate}
-            onChange={(e) => setNewSessionDate(e.target.value)}
-            required
-          />
-        </div>
-        <Button type="submit">Ajouter une session</Button>
-      </form>
+
     </div>
   )
 }

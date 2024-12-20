@@ -1,5 +1,11 @@
 {
-  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/clients/page": "app/clients/page.js",
+  "/generate-link/page": "app/generate-link/page.js",
+  "/projects/[id]/page": "app/projects/[id]/page.js",
+  "/inscription/[token]/page": "app/inscription/[token]/page.js",
+  "/register/page": "app/register/page.js",
+  "/login/page": "app/login/page.js"
 }
