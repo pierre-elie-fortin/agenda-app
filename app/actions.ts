@@ -19,7 +19,7 @@ export async function getClients() {
   })
 }
 
-export async function getClient(id) {
+export async function getClient(id: string) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
@@ -78,7 +78,7 @@ export async function addProject(clientId: string, { nom, description }: { nom: 
   })
 }
 
-export async function getProject(params) {
+export async function getProject(params: string) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
@@ -95,7 +95,7 @@ export async function getProject(params) {
 }
 
 
-export async function addSession(params, date: Date) {
+export async function addSession(params: string, date: Date) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) throw new Error("Unauthorized: User email is missing");
 
