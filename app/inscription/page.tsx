@@ -15,7 +15,7 @@ export default function InscriptionForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await addClient({ nom, email, telephone, token: 'direct' })
+    await addClient({ nom, email, telephone })
     router.push('/inscription-reussie')
   }
 

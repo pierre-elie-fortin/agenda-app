@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { addClient } from '@/app/actions'
 
-export default function InscriptionForm({ params }) {
+export default function InscriptionForm() {
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
@@ -15,7 +15,7 @@ export default function InscriptionForm({ params }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await addClient({ nom, email, telephone, token: params.token })
+    await addClient({ nom, email, telephone })
     router.push('/inscription-reussie')
   }
 

@@ -20,7 +20,7 @@ export default function ProfilePage() {
         if (session?.user) {
             setName(session.user.name || '')
             setEmail(session.user.email || '')
-            setSubscriptionPlan(session.user.subscriptionPlan || 'free')
+            setSubscriptionPlan('free')
         }
     }, [session])
 

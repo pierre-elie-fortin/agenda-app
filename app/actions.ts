@@ -280,6 +280,7 @@ export async function getSessionsPerMonth(year: number) {
     // Group sessions by month
     const monthlyCounts = Array.from({ length: 12 }, () => 0);
     for (const session of sessions) {
+      if (!session.date) continue; // Skip if date is null
       const month = session.date.getMonth(); // 0 = January, 11 = December
       monthlyCounts[month] += 1;
     }

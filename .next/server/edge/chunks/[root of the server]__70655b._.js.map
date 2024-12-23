@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/middleware.ts"],"sourcesContent":["import { withAuth } from \"next-auth/middleware\"\n\nexport default withAuth({\n  pages: {\n    signIn: \"/login\",\n  },\n})\n\nexport const config = {\n  matcher: [\"/dashboard/:path*\", \"/clients/:path*\", \"/projects/:path*\"],\n}\n\n"],"names":[],"mappings":";;;;AAAA;;uCAEe,CAAA,GAAA,0IAAA,CAAA,WAAQ,AAAD,EAAE;IACtB,OAAO;QACL,QAAQ;IACV;AACF;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;QAAqB;QAAmB;KAAmB;AACvE"}},
-    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

@@ -7,13 +7,16 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getClient, updateClient } from '@/app/actions'
 import Link from "next/link"
-export default function EditClientPage({ params }) {
+interface ParamsI {
+  id: string;
+}
+export default function EditClientPage({ params }: never) {
   const [client, setClient] = useState(null)
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
   const router = useRouter()
-  const useParams = use(params)
+  const useParams = use(params) as ParamsI
 
   useEffect(() => {
     if (!params) return

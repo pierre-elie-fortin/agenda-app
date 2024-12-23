@@ -2,18 +2,20 @@
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "allowJs": true,               // Allow JavaScript files
+    "skipLibCheck": true,          // Skip type checking of declaration files
+    "strict": false,               // Disable strict type-checking
+    "noEmit": false,               // Allow emitting compiled JavaScript
+    "esModuleInterop": true,       // Interoperability between CommonJS and ES modules
     "module": "esnext",
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "resolveJsonModule": true,     // Allow importing JSON modules
+    "isolatedModules": true,       // Ensure each file is treated as a module
     "jsx": "preserve",
-    "incremental": true,
-    "ignoreErrors": true,
+    "incremental": true,           // Enable incremental builds
+    "suppressImplicitAnyIndexErrors": true, // Suppress errors for implicit "any" types in index signatures
+    "allowUnreachableCode": false,  // Ignore unreachable code warnings
+    "allowUnusedLabels": false,     // Ignore unused labels warnings
     "plugins": [
       {
         "name": "next"

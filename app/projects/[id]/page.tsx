@@ -7,11 +7,13 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getProject, addSession, deleteSession } from '@/app/actions'
-
+interface ParamsI {
+    id: string;
+}
 export default function ProjectPage({ params }) {
   const [project, setProject] = useState(null)
   const [newSessionDate, setNewSessionDate] = useState('')
-  const useParams = use(params)
+  const useParams  = use(params) as ParamsI
   useEffect(() => {
     const fetchProject = async () => {
       const fetchedProject = await getProject(useParams.id)

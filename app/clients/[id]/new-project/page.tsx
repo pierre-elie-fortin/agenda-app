@@ -7,12 +7,14 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { addProject } from '@/app/actions'
-
+interface ParamsI {
+  id: string;
+}
 export default function NewProjectPage({ params }) {
   const [nom, setNom] = useState('')
   const [description, setDescription] = useState('')
   const router = useRouter()
-  const useParams = use(params)
+  const useParams = use(params) as ParamsI
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
