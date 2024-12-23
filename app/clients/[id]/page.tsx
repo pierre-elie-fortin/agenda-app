@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { getClient } from '@/app/actions'
 import { Button } from '@/components/ui/button'
 
-export default async function ClientPage({ params }: { params: { id: string } }) {
+export default async function ClientPage({ params }) {
   const client = await getClient(params.id)
 
   if (!client) {
