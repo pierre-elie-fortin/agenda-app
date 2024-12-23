@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getClient, updateClient } from '@/app/actions'
 import Link from "next/link"
-export default function EditClientPage({ params }: { params: { id: string } }) {
+export default function EditClientPage({ params }) {
   const [client, setClient] = useState(null)
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
