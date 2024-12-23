@@ -4,9 +4,9 @@ import { useTheme } from "next-themes"
 import { Tooltip } from "recharts"
 
 
-export function ChartContainer({ config, children }: { config: any, children: React.ReactNode }) {
+export function ChartContainer({ config, children }: { config, children: React.ReactNode }) {
     const { theme } = useTheme()
-
+    console.log(config)
     return (
         <div className="chart-container" style={{ "--color-primary": theme === "dark" ? "#ffffff" : "#000000" } as React.CSSProperties}>
             {children}
@@ -14,7 +14,7 @@ export function ChartContainer({ config, children }: { config: any, children: Re
     )
 }
 
-export function ChartTooltip({ active, payload, label }: { active?: boolean, payload?: any[], label?: string }) {
+export function ChartTooltip({ active, payload, label }: { active?: boolean, payload?, label?: string }) {
     if (active && payload && payload.length) {
         return (
             <div className="rounded-lg border bg-background p-2 shadow-sm">
@@ -35,7 +35,7 @@ export function ChartTooltip({ active, payload, label }: { active?: boolean, pay
     return null
 }
 
-export function ChartTooltipContent({ hideLabel }: { hideLabel?: boolean }) {
+export function ChartTooltipContent() {
     return (
         <Tooltip content={<ChartTooltip />} />
     )

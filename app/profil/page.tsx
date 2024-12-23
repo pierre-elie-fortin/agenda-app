@@ -70,7 +70,7 @@ export default function ProfilePage() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="subscriptionPlan">Plan d'abonnement</Label>
+                            <Label htmlFor="subscriptionPlan">Plan d&apos;abonnement</Label>
                             {/*<Select value={subscriptionPlan} onValueChange={setSubscriptionPlan}>*/}
                             {/*    <SelectTrigger>*/}
                             {/*        <SelectValue placeholder="Sélectionnez un plan" />*/}
