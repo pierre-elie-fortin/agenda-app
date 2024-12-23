@@ -123,8 +123,8 @@ export async function addSession(params: string, date: Date) {
 
     return await prisma.projectSession.create({data: payload});
   } catch (error) {
-    console.error("Error adding session:", error.stack || error);
-    throw new Error(`Failed to add session: ${error.message}`);
+    console.error("Error adding session");
+    throw new Error(`Failed to add session: ${error}`);
   }
 }
 
