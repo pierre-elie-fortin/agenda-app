@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { addProject } from '@/app/actions'
 
-export default function NewProjectPage({ params }: { params: { id: string } }) {
+export default function NewProjectPage({ params }) {
   const [nom, setNom] = useState('')
   const [description, setDescription] = useState('')
   const router = useRouter()
