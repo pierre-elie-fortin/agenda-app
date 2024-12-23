@@ -1,7 +1,7 @@
 'use server'
 
 import {getServerSession} from "next-auth/next"
-import {authOptions} from "./api/auth/[...nextauth]/route"
+import {authOptions} from "./utils/authOptions"
 import prisma from "@/lib/prisma"
 import { revalidateTag } from "next/cache"
 
