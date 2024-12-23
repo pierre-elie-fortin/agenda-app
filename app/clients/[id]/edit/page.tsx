@@ -1,24 +1,24 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect, use} from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getClient, updateClient } from '@/app/actions'
 import Link from "next/link"
-import { Client } from '@/../agenda-app/app/interface'
 export default function EditClientPage({ params }: { params: { id: string } }) {
-  const [client, setClient] = useState<Client | null>(null)
+  const [client, setClient] = useState(null)
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
   const router = useRouter()
+  const useParams = use(params)
 
   useEffect(() => {
     if (!params) return
     const fetchClient = async () => {
-      const fetchedClient = await getClient(params)
+      const fetchedClient = await getClient(useParams.id)
       setClient(fetchedClient)
       setNom(fetchedClient.nom)
       setEmail(fetchedClient.email)
@@ -29,8 +29,8 @@ export default function EditClientPage({ params }: { params: { id: string } }) {
 
   const handleUpdateClient = async (e: React.FormEvent) => {
     e.preventDefault()
-    await updateClient(params.id, { nom, email, telephone })
-    router.push(`/clients/${params.id}`)
+    await updateClient(useParams.id, { nom, email, telephone })
+    router.push(`/clients/${useParams.id}`)
   }
 
   if (!client) {
