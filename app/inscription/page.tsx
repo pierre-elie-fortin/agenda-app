@@ -35,7 +35,7 @@ export default function InscriptionForm() {
           <Label htmlFor="telephone">Téléphone</Label>
           <Input id="telephone" type="tel" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
         </div>
-        <Button type="submit">S'inscrire</Button>
+        <Button type="submit">S&apos;inscrire</Button>
       </form>
     </div>
   )

@@ -58,7 +58,7 @@ export function RegisterForm() {
           required
         />
       </div>
-      <Button type="submit">S'inscrire</Button>
+      <Button type="submit">S&apos;inscrire</Button>
     </form>
   )
 }

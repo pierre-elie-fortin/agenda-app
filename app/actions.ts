@@ -3,6 +3,7 @@
 import {getServerSession} from "next-auth/next"
 import {authOptions} from "./api/auth/[...nextauth]/route"
 import prisma from "@/lib/prisma"
+import { revalidateTag } from "next/cache"
 
 export async function getClients() {
   const session = await getServerSession(authOptions)
@@ -18,13 +19,13 @@ export async function getClients() {
   })
 }
 
-export async function getClient(params) {
+export async function getClient(id) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
 
   return prisma.client.findFirst({
     where: {
-      id: params.id,
+      id: id,
       user: { email: session.user.email }
     },
     include: {
@@ -316,10 +317,13 @@ export async function updateUserProfile({
       },
     })
 
+    // Revalidate the session
+    revalidateTag('session')
+
     return { success: true, user: updatedUser }
   } catch (error) {
-    console.error("Error while update:", error)
-    return { success: false, error: "Error while update" }
+    console.error("Erreur lors de la mise à jour du profil:", error)
+    return { success: false, error: "Erreur lors de la mise à jour du profil" }
   }
 }
 

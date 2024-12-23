@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import {use, useState} from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -12,11 +12,12 @@ export default function NewProjectPage({ params }: { params: { id: string } }) {
   const [nom, setNom] = useState('')
   const [description, setDescription] = useState('')
   const router = useRouter()
+  const useParams = use(params)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await addProject(params.id, { nom, description })
-    router.push(`/clients/${params.id}`)
+    await addProject(useParams.id, { nom, description })
+    router.push(`/clients/${useParams.id}`)
   }
 
   return (

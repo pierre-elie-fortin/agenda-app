@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useSession, signOut } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
-import { CalendarDays, Users, LinkIcon, BarChart2, LogOut, LogIn, UserPlus, User, CreditCard } from 'lucide-react'
+import { CalendarDays, Users, BarChart2, LogOut, LogIn, UserPlus, User, CreditCard } from 'lucide-react'
 
 export function Navigation() {
     const { data: session } = useSession()
@@ -11,7 +11,7 @@ export function Navigation() {
     return (
         <nav className="bg-gray-100 p-4">
             <div className="container mx-auto flex justify-between items-center">
-                <Link href="/" className="text-xl font-bold">Gestion d'Agenda</Link>
+                <Link href="/" className="text-xl font-bold">Gestion d&apos;Agenda</Link>
                 <div className="flex space-x-2 md:space-x-4">
                     {session ? (
                         <>

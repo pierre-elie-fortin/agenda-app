@@ -21,10 +21,10 @@ export default async function Dashboard() {
           </Suspense>
           <div className="mt-6">
               <h2 className="text-2xl font-bold">
-                  Sessions d'aujourd'hui ({new Intl.DateTimeFormat('fr-FR', {
+                  Sessions d&apos;aujourd&apos;hui ({new Intl.DateTimeFormat('fr-FR', {
                   day: '2-digit',
                   month: '2-digit',
-                  year: 'numeric'
+                  year: 'numeric',
               }).format(new Date())})
               </h2>
               {todaySessions.length > 0 ? (
@@ -36,7 +36,7 @@ export default async function Dashboard() {
                       ))}
                   </ul>
               ) : (
-                  <p className="mt-4">Aucune session prévue pour aujourd'hui.</p>
+                  <p className="mt-4">Aucune session prévue pour aujourd&apos;hui.</p>
               )}
           </div>
       </div>

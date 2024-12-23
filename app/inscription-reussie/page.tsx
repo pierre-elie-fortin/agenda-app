@@ -7,7 +7,7 @@ export default function InscriptionReussie() {
       <h1 className="text-2xl font-bold mb-4">Inscription réussie !</h1>
       <p className="mb-4">Merci de vous être inscrit. Votre compte a été créé avec succès.</p>
       <Button asChild>
-        <Link href="/">Retour à l'accueil</Link>
+          <Link href="/">Retour à l&apos;accueil</Link>
       </Button>
     </div>
   )

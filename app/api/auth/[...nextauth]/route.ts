@@ -3,7 +3,9 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import CredentialsProvider from "next-auth/providers/credentials"
 import prisma from "@/lib/prisma"
 import bcrypt from "bcrypt"
-
+interface JWTUser {
+  id: string;
+}
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
@@ -63,7 +65,7 @@ export const authOptions: NextAuthOptions = {
     },
     jwt: ({ token, user }) => {
       if (user) {
-        const u = user as unknown as any
+        const u = user as JWTUser
         return {
           ...token,
           id: u.id,

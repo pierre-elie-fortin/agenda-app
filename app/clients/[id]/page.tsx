@@ -19,7 +19,7 @@ export default async function ClientPage({ params }: { params: { id: string } })
 
       <h2 className="text-2xl font-bold mt-6 mb-2">Projets</h2>
       <ul className="space-y-2 mb-4">
-        {client.projects.map((project: any) => (
+        {client.projects.map((project) => (
           <li key={project.id} className="border p-2 rounded">
             <Link href={`/projects/${project.id}`} className="text-blue-500 hover:underline">
               {project.nom}

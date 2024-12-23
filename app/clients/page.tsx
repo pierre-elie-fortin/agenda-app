@@ -39,12 +39,12 @@ export default function ClientsList() {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Générer un lien d'inscription</h1>
+            <h1 className="text-2xl font-bold mb-4">Générer un lien d&apos;inscription</h1>
             <div className="space-y-4 mb-3">
                 <Button onClick={generateLink}>Générer un nouveau lien</Button>
                 {lien && (
                     <div>
-                        <Label htmlFor="lien">Lien d'inscription :</Label>
+                        <Label htmlFor="lien">Lien d&apos;inscription :</Label>
                         <Input id="lien" value={lien} readOnly/>
                     </div>
                 )}

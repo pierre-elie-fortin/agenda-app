@@ -6,7 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 moment.locale('fr')
 const localizer = momentLocalizer(moment)
-export default function Calendrier({ events }: { events: any[] }) {
+export default function Calendrier({ events }: { events }) {
   return (
     <div style={{ height: '500px' }}>
       <Calendar

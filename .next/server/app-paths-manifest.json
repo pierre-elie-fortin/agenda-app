@@ -13,5 +13,7 @@
   "/page": "app/page.js",
   "/profil/page": "app/profil/page.js",
   "/tarification/page": "app/tarification/page.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/dashboard/page": "app/dashboard/page.js",
+  "/login/page": "app/login/page.js",
+  "/clients/[id]/edit/page": "app/clients/[id]/edit/page.js"
 }

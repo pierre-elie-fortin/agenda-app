@@ -1,7 +1,7 @@
 "use client"
 
 import { useTheme } from "next-themes"
-import { Bar, BarChart, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
+import { Tooltip } from "recharts"
 
 
 export function ChartContainer({ config, children }: { config: any, children: React.ReactNode }) {

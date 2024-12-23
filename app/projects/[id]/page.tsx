@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label'
 import { getProject, addSession, deleteSession } from '@/app/actions'
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
-  const [project, setProject] = useState<any>(null)
+  const [project, setProject] = useState(null)
   const [newSessionDate, setNewSessionDate] = useState('')
   const useParams = use(params)
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   const handleAddSession = async (e: React.FormEvent) => {
     e.preventDefault()
       try {
-          const newSession =   await addSession(useParams.id, new Date(newSessionDate));
+         await addSession(useParams.id, new Date(newSessionDate));
       } catch (error) {
           console.error("Failed to add session:", error);
       }
@@ -50,7 +50,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
       <h2 className="text-2xl font-bold mt-6 mb-2">Sessions</h2>
       <ul className="space-y-2 mb-4">
-        {project.sessions.map((session: any) => (
+        {project.sessions.map((session) => (
           <li key={session.id} className="flex justify-between items-center border p-2 rounded">
             <span>{format(new Date(session.date), 'dd MMMM yyyy HH:mm', { locale: fr })}</span>
             <Button variant="destructive" onClick={() => handleDeleteSession(session.id)}>Supprimer</Button>
