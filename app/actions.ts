@@ -127,9 +127,6 @@ export async function addSession(params, date: Date) {
   }
 }
 
-
-
-
 export async function deleteSession(sessionId: string) {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) throw new Error("Non autorisé")
@@ -204,5 +201,128 @@ export async function getSessionsForDay(date: Date) {
     },
   });
 }
+
+export async function getNewClientsPerMonth(year: number) {
+
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) {
+      throw new Error("Non autorisé");
+    }
+  try {
+    // Définir les bornes de la période
+    const startDate = new Date(year, 0, 1);
+    const endDate = new Date(year + 1, 0, 1);
+
+    // Requête Prisma
+    const allNewClients = await prisma.client.findMany({
+      where: {
+        user: { email: session.user.email },
+        createdAt: {
+          gte: startDate,
+          lt: endDate,
+        },
+      },
+      select: { createdAt: true },
+    });
+
+    // Si aucun client n’est trouvé
+    if (allNewClients.length === 0) {
+      return Array.from({ length: 12 }, (_, month) => ({
+        month,
+        count: 0,
+      }));
+    }
+
+    // Compter les clients par mois
+    const monthlyCounts = Array.from({ length: 12 }, () => 0);
+
+    for (const client of allNewClients) {
+      const month = client.createdAt.getMonth(); // 0 = janvier, 11 = décembre
+      monthlyCounts[month] += 1;
+    }
+
+    return monthlyCounts.map((count, month) => ({
+      month,
+      count,
+    }));
+  } catch (error) {
+    console.error("Erreur dans getNewClientsPerMonth:", error);
+    throw error; // Ou renvoyer une valeur par défaut comme []
+  }
+}
+
+
+
+export async function getSessionsPerMonth(year: number) {
+  try {
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.email) {
+      throw new Error("Non autorisé");
+    }
+
+    // Define the date range for the year
+    const startDate = new Date(year, 0, 1);
+    const endDate = new Date(year + 1, 0, 1);
+
+    // Fetch all sessions in the date range
+    const sessions = await prisma.projectSession.findMany({
+      where: {
+        user: { email: session.user.email },
+        date: {
+          gte: startDate,
+          lt: endDate,
+        },
+      },
+      select: { date: true }, // Fetch only the date field
+    });
+
+    // Group sessions by month
+    const monthlyCounts = Array.from({ length: 12 }, () => 0);
+    for (const session of sessions) {
+      const month = session.date.getMonth(); // 0 = January, 11 = December
+      monthlyCounts[month] += 1;
+    }
+
+    // Return the monthly counts
+    return monthlyCounts.map((count, month) => ({
+      month,
+      count,
+    }));
+  } catch (error) {
+    console.error("Error in getSessionsPerMonth:", error);
+    throw error; // Optionally return an empty array
+  }
+}
+
+export async function updateUserProfile({
+                                          name,
+                                          email,
+                                          subscriptionPlan
+                                        }: {
+  name?: string,
+  email?: string,
+  subscriptionPlan?: 'free' | 'basic' | 'pro'
+}) {
+  const session = await getServerSession(authOptions)
+  if (!session?.user?.email) throw new Error("Non autorisé")
+
+  try {
+    const updatedUser = await prisma.user.update({
+      where: { email: session.user.email },
+      data: {
+        ...(name && { name }),
+        ...(email && { email }),
+        ...(subscriptionPlan && { subscriptionPlan }),
+      },
+    })
+
+    return { success: true, user: updatedUser }
+  } catch (error) {
+    console.error("Error while update:", error)
+    return { success: false, error: "Error while update" }
+  }
+}
+
+
 
 

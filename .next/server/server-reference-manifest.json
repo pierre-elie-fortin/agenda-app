@@ -1,263 +1,581 @@
 {
   "node": {
-    "4031bcfd87c983ccfdc9d8069435be802bcb9d8c33": {
+    "40bbc49dc634f69f1c78cd2e6c2a0d180e4babc9f1": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/projects/[id]/page": {
           "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
         "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     },
-    "409ea1cf8dd9d2a6ce9b7235b50f494d2780488e8a": {
+    "401ce9609ae84c0174660594c22ff001856c4ef051": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/projects/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
-        "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
-      }
-    },
-    "60ea03d08d79dfbfc21988c4efb5d50a5695c36273": {
-      "workers": {
         "app/dashboard/page": {
           "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
-        },
-        "app/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/projects/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
-        "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
-      }
-    },
-    "40d2bb87bd82b340b04ab63ed7681828be2721aa58": {
-      "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/projects/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
-        "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
-      }
-    },
-    "40d0d2d0cd93a4904c28a43db7db87167b31d4e2d3": {
-      "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/projects/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
-        "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
-      }
-    },
-    "601e5519a59d3bb565effd1a9a098614e5a8afd020": {
-      "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/projects/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
-        "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/statistiques/page": "rsc",
+        "app/clients/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     },
     "60d033e9802d45481c6e6b101a17f4ac42415017da": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/projects/[id]/page": {
           "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
-        "app/inscription/[token]/page": {
-          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
         "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     },
-    "40bbc49dc634f69f1c78cd2e6c2a0d180e4babc9f1": {
+    "409ea1cf8dd9d2a6ce9b7235b50f494d2780488e8a": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/projects/[id]/page": {
           "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "40d901b356e8c99e1d1f89cfa99cf79f70afcf7d1d": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/inscription/[token]/page": {
           "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
         "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "60ea03d08d79dfbfc21988c4efb5d50a5695c36273": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     },
     "00566caf548eed8c25f58323bf1e98a0a4e531c768": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/projects/[id]/page": {
           "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "4031bcfd87c983ccfdc9d8069435be802bcb9d8c33": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/inscription/[token]/page": {
           "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
         "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "40d0d2d0cd93a4904c28a43db7db87167b31d4e2d3": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "40d2bb87bd82b340b04ab63ed7681828be2721aa58": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     },
     "40ddabc29cb0fc2a18200ca21efd8aa6d1f2e208bb": {
       "workers": {
-        "app/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/clients/page": {
           "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
         "app/projects/[id]/page": {
           "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "40849e2bae3489b42c842fff4e89f0ccafebe320b8": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
         },
         "app/inscription/[token]/page": {
           "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
           "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/dashboard/page": "rsc",
-        "app/clients/page": "rsc",
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
         "app/projects/[id]/page": "action-browser",
-        "app/inscription/[token]/page": "action-browser"
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
+      }
+    },
+    "601e5519a59d3bb565effd1a9a098614e5a8afd020": {
+      "workers": {
+        "app/statistiques/page": {
+          "moduleId": "[project]/.next-internal/server/app/statistiques/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/inscription/[token]/page": {
+          "moduleId": "[project]/.next-internal/server/app/inscription/[token]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/clients/[id]/new-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/clients/[id]/new-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/projects/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/projects/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/profil/page": {
+          "moduleId": "[project]/.next-internal/server/app/profil/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/statistiques/page": "rsc",
+        "app/inscription/[token]/page": "action-browser",
+        "app/clients/page": "action-browser",
+        "app/clients/[id]/page": "rsc",
+        "app/clients/[id]/new-project/page": "action-browser",
+        "app/projects/[id]/page": "action-browser",
+        "app/profil/page": "action-browser",
+        "app/dashboard/page": "rsc"
       }
     }
   },
