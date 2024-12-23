@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { addClient } from '@/app/actions'
 
-export default function InscriptionForm({ params }: { params: { token: string } }) {
+export default function InscriptionForm({ params }) {
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
