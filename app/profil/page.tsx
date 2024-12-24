@@ -12,6 +12,7 @@ export default function ProfilePage() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subscriptionPlan, setSubscriptionPlan] = useState('free');
+
     const router = useRouter();
 
     useEffect(() => {
