@@ -328,6 +328,22 @@ export async function updateUserProfile({
   }
 }
 
+export async function getUser() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.email) {
+    throw new Error("Non autorisé"); // Unauthorized
+  }
+
+  return prisma.user.findUnique({
+    where: {
+      email: session.user.email, // Find the user by their email
+    },
+    include: {
+      clients: true, // Include related clients if they are related to the user
+    },
+  });
+}
+
 
 
 
