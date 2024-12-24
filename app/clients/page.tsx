@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { getClients } from '../actions';
 import {Label} from "@/components/ui/label";
+import {Client} from '@/app/interface'
 
 export default function ClientsList() {
-    const [clients, setClients] = useState([]);
+    const [clients, setClients] = useState<Client[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [lien, setLien] = useState('')
 

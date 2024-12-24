@@ -7,11 +7,12 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getClient, updateClient } from '@/app/actions'
 import Link from "next/link"
+import {Client} from '@/app/interface'
 interface ParamsI {
   id: string;
 }
 export default function EditClientPage({ params }: never) {
-  const [client, setClient] = useState(null)
+  const [client, setClient] = useState<Client | null>(null);
   const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
   const [telephone, setTelephone] = useState('')
@@ -23,9 +24,14 @@ export default function EditClientPage({ params }: never) {
     const fetchClient = async () => {
       const fetchedClient = await getClient(useParams.id)
       setClient(fetchedClient)
-      setNom(fetchedClient.nom)
-      setEmail(fetchedClient.email)
-      setTelephone(fetchedClient.telephone)
+      if (fetchedClient) {
+        setClient(fetchedClient);
+        setNom(fetchedClient.nom);
+        setEmail(fetchedClient.email);
+        setTelephone(fetchedClient.telephone);
+      } else {
+        console.error('Fetched client is null');
+      }
     }
     fetchClient()
   }, [params])

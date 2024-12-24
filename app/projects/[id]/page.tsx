@@ -7,11 +7,16 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getProject, addSession, deleteSession } from '@/app/actions'
+import { Prisma } from '@prisma/client';
+
 interface ParamsI {
     id: string;
 }
-export default function ProjectPage({ params }) {
-  const [project, setProject] = useState(null)
+
+type ProjectWithClient = Prisma.PromiseReturnType<typeof getProject>;
+
+export default function ProjectPage({ params }: never) {
+    const [project, setProject] = useState<ProjectWithClient | null>(null);
   const [newSessionDate, setNewSessionDate] = useState('')
   const useParams  = use(params) as ParamsI
   useEffect(() => {
@@ -45,35 +50,39 @@ export default function ProjectPage({ params }) {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Projet: {project.nom}</h1>
-      <p className="mb-4"><strong>Client:</strong> {project.client.nom}</p>
-      <p className="mb-4">{project.description}</p>
+      <div className="container mx-auto p-4">
+          <h1 className="text-3xl font-bold mb-4">Projet: {project.nom}</h1>
+          <p className="mb-4"><strong>Client:</strong> {project?.client?.nom}</p>
+          <p className="mb-4">{project.description}</p>
 
-      <h2 className="text-2xl font-bold mt-6 mb-2">Sessions</h2>
-      <ul className="space-y-2 mb-4">
-        {project.sessions.map((session) => (
-          <li key={session.id} className="flex justify-between items-center border p-2 rounded">
-            <span>{format(new Date(session.date), 'dd MMMM yyyy HH:mm', { locale: fr })}</span>
-            <Button variant="destructive" onClick={() => handleDeleteSession(session.id)}>Supprimer</Button>
-          </li>
-        ))}
-      </ul>
+          <h2 className="text-2xl font-bold mt-6 mb-2">Sessions</h2>
+          <ul className="space-y-2 mb-4">
+              {project?.sessions?.map((session) => (
+                  <li key={session.id} className="flex justify-between items-center border p-2 rounded">
+      <span>
+        {session.date
+            ? format(new Date(session.date), 'dd MMMM yyyy HH:mm', {locale: fr})
+            : 'Date inconnue'}
+      </span>
+                      <Button variant="destructive" onClick={() => handleDeleteSession(session.id)}>Supprimer</Button>
+                  </li>
+              ))}
+          </ul>
 
-      <form onSubmit={handleAddSession} className="space-y-4">
-        <div>
-          <Label htmlFor="newSession">Nouvelle session</Label>
-          <Input
-            id="newSession"
-            type="datetime-local"
-            value={newSessionDate}
-            onChange={(e) => setNewSessionDate(e.target.value)}
-            required
-          />
-        </div>
-        <Button type="submit">Ajouter une session</Button>
-      </form>
-    </div>
+          <form onSubmit={handleAddSession} className="space-y-4">
+              <div>
+                  <Label htmlFor="newSession">Nouvelle session</Label>
+                  <Input
+                      id="newSession"
+                      type="datetime-local"
+                      value={newSessionDate}
+                      onChange={(e) => setNewSessionDate(e.target.value)}
+                      required
+                  />
+              </div>
+              <Button type="submit">Ajouter une session</Button>
+          </form>
+      </div>
   )
 }
 

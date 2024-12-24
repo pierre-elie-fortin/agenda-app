@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { getClient } from '@/app/actions'
 import { Button } from '@/components/ui/button'
+type Params = Promise<{ id: string }>;
 
-export default async function ClientPage({ params }) {
-  const client = await getClient(params.id)
+export default async function ClientPage({ params }: { params: Params }) {
+    const { id } = await params;
 
+    const client = await getClient(id);
   if (!client) {
     return <div>Client non trouvé</div>
   }

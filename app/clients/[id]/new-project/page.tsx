@@ -10,11 +10,11 @@ import { addProject } from '@/app/actions'
 interface ParamsI {
   id: string;
 }
-export default function NewProjectPage({ params }) {
+export default function NewProjectPage({ params }: never) {
   const [nom, setNom] = useState('')
   const [description, setDescription] = useState('')
   const router = useRouter()
-  const useParams = use(params) as ParamsI
+  const useParams: ParamsI = use(params)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

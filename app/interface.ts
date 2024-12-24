@@ -16,10 +16,8 @@ export interface ProjectSession {
     id: string;
     sessionToken?: string;
     userId: string;
-    user: User;
     date?: Date;
-    projectId?: string;
-    project?: Project;
+    projectId: string;
     expires?: Date;
     createdAt: Date;
 }
@@ -45,7 +43,6 @@ export interface Client {
     email: string;
     telephone: string;
     userId: string;
-    user: User;
     projects: Project[];
     createdAt: Date;
 }
@@ -54,6 +51,6 @@ export interface Project {
     nom: string;
     description: string;
     clientId: string;
-    client: Client;
-    sessions: ProjectSession[];
+    // sessions? : ProjectSession[]
+    // client?: Client
 }
